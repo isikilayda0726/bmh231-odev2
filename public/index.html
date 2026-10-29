@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kampüs Etkinlik Panosu</title>
+  <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+  <header class="ust-bant">
+    <div class="logo">Bozok Etkinlik</div>
+    <nav>
+      <a href="#liste">Etkinlikler</a>
+      <a href="#oner">Öneri Formu</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="liste">
+      <h1>Yaklaşan Etkinlikler</h1>
+      <div class="filtre-alani">
+        <input type="text" id="aramaKutusu" placeholder="Etkinlik ara (örn. git)...">
+        <div class="butonlar">
+          <button class="tur-btn secili" data-tur="">Tümü</button>
+          <button class="tur-btn" data-tur="atolye">Atölye</button>
+          <button class="tur-btn" data-tur="soylesi">Söyleşi</button>
+          <button class="tur-btn" data-tur="topluluk">Topluluk</button>
+        </div>
+      </div>
+      <div id="yukleniyor" class="gizli">Yükleniyor...</div>
+      <div id="etkinlikKapsayici" class="kartlar-grid"></div>
+    </section>
+
+    <section id="oner">
+      <h2>Etkinlik Öner</h2>
+      <form id="oneriFormu">
+        <div>
+          <label for="baslikInput">Etkinlik Adı:</label>
+          <input type="text" id="baslikInput">
+        </div>
+        <div>
+          <label for="tarihInput">Tarih:</label>
+          <input type="date" id="tarihInput">
+        </div>
+        <div>
+          <label for="epostaInput">E-posta:</label>
+          <input type="email" id="epostaInput">
+        </div>
+        <button type="submit">Öneriyi Gönder</button>
+        <p id="formMesaj"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bozok Etkinlik Panosu</p>
+  </footer>
+
+  <script src="betik.js"></script>
+</body>
+</html>
