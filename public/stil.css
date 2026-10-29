@@ -1,0 +1,134 @@
+:root {
+  --ana-renk: #2c3e50;
+  --vurgu-renk: #e74c3c;
+  --arkaplan: #f5f6fa;
+  --kart-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--arkaplan);
+  color: var(--ana-renk);
+  line-height: 1.6;
+}
+
+.ust-bant {
+  background-color: var(--ana-renk);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ust-bant nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filtre-alani {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filtre-alani input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.butonlar button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.butonlar button.secili {
+  background-color: var(--vurgu-renk);
+  color: white;
+}
+
+.kartlar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.kart {
+  background-color: var(--kart-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-left: 5px solid var(--vurgu-renk);
+}
+
+.gizli { display: none; }
+
+#oner {
+  margin-top: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+#oner form div {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#oner label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+#oner input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hata { color: red; font-weight: bold; }
+.basarili { color: green; font-weight: bold; }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--ana-renk);
+  color: white;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .ust-bant {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .filtre-alani {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
